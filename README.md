@@ -18,6 +18,14 @@ A Chrome extension that adds a navigation sidebar to AI chat platforms
 
 Hopper adds a navigation sidebar to AI chat platforms. It lets you view all messages at a glance, search conversations, filter by role, and jump to any message instantly instead of scrolling through long threads.
 
+<div align="center">
+
+![Hopper Demo](demo/demo.gif)
+
+*Hopper in action — Search, filter, and navigate AI conversations with ease*
+
+</div>
+
 ## Features
 
 - **Instant Search & Filtering** — Quickly find any message and filter by user, AI, or favorites
