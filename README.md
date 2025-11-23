@@ -9,6 +9,7 @@ A Chrome extension that adds a navigation sidebar to AI chat platforms
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![JavaScript](https://img.shields.io/badge/JavaScript-71%25-green?logo=javascript&logoColor=white)
 ![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=Osm0s1s.Hopper)
 
 [Installation](#installation) • [Supported Platforms](#supported-platforms) • [Development](#development)
 
