@@ -383,7 +383,15 @@
                 /^thinking\.\.\./i,
                 /^generating\.\.\./i,
                 /pondering,?\s*stand by/i,
-                /^stand by/i
+                /^stand by/i,
+                /^searching/i,
+                /^web searching/i,
+                /^browsing/i,
+                /^checking/i,
+                /^looking up/i,
+                /^running/i,
+                /^analyzing/i,
+                /^reading/i
               ];
 
               const isThinkingOnly = thinkingPatterns.some(pattern => {
