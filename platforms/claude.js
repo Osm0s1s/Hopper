@@ -93,7 +93,7 @@
               });
             }
           } catch (err) {
-            console.error('Hopper [Claude]: Error processing user message:', err);
+            console.error('ZeroScroll [Claude]: Error processing user message:', err);
           }
 
           // Process Assistant Response
@@ -418,13 +418,13 @@
               }
             }
           } catch (err) {
-            console.error(`Hopper [Claude]: Error finding assistant for user ${userIndex}:`, err);
+            console.error(`ZeroScroll [Claude]: Error finding assistant for user ${userIndex}:`, err);
           }
         });
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [Claude]: Error detecting messages:', error);
+        console.error('ZeroScroll [Claude]: Error detecting messages:', error);
         return [];
       }
     },

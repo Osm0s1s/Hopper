@@ -201,7 +201,7 @@
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [Gemini]: Error detecting messages:', error);
+        console.error('ZeroScroll [Gemini]: Error detecting messages:', error);
         return [];
       }
     },

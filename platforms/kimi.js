@@ -309,13 +309,13 @@
               order: messageOrder++
             });
           } catch (err) {
-            console.error(`Hopper [Kimi]: Error processing item ${index}:`, err);
+            console.error(`ZeroScroll [Kimi]: Error processing item ${index}:`, err);
           }
         });
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [Kimi]: Error detecting messages:', error);
+        console.error('ZeroScroll [Kimi]: Error detecting messages:', error);
         return [];
       }
     },

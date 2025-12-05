@@ -7,7 +7,7 @@
  */
 
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Hopper installed');
+  console.log('ZeroScroll installed');
 });
 
 /**

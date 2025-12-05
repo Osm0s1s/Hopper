@@ -161,7 +161,7 @@
               order: order++
             });
           } catch (err) {
-            console.error('Hopper [Qwen]: Error processing message:', err);
+            console.error('ZeroScroll [Qwen]: Error processing message:', err);
           }
         });
 
@@ -178,7 +178,7 @@
 
         return messages;
       } catch (error) {
-        console.error('Hopper [Qwen]: Error detecting messages:', error);
+        console.error('ZeroScroll [Qwen]: Error detecting messages:', error);
         return [];
       }
     },

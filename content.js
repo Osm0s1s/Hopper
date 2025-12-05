@@ -1,5 +1,5 @@
 /**
- * Hopper - Main Content Script
+ * ZeroScroll - Main Content Script
  *
  * Platform-agnostic router that coordinates platform-specific implementations.
  * Manages sidebar injection, message detection, DOM observation, and user interactions.
@@ -64,7 +64,7 @@ function detectPlatform() {
   try {
     // Verify platform APIs are loaded
     if (!window.HopperPlatform) {
-      console.error('Hopper: Platform APIs not loaded');
+      console.error('ZeroScroll: Platform APIs not loaded');
       return null;
     }
 
@@ -80,7 +80,7 @@ function detectPlatform() {
 
     return null;
   } catch (error) {
-    console.error('Hopper: Error detecting platform:', error);
+    console.error('ZeroScroll: Error detecting platform:', error);
     return null;
   }
 }
@@ -200,7 +200,7 @@ function init() {
       setTimeout(tryDetect, detectionInterval * 2);
     }, initialDelay);
   } catch (error) {
-    console.error('Hopper: Fatal error in init:', error);
+    console.error('ZeroScroll: Fatal error in init:', error);
   }
 }
 
@@ -226,7 +226,7 @@ function setupNavigationObserver() {
     window.addEventListener('popstate', checkUrlChange);
     setInterval(checkUrlChange, 1000);
   } catch (error) {
-    console.error('Hopper: Error setting up navigation observer:', error);
+    console.error('ZeroScroll: Error setting up navigation observer:', error);
   }
 }
 
@@ -275,7 +275,7 @@ function checkUrlChange() {
       }, 1000);
     }
   } catch (error) {
-    console.error('Hopper: Error checking URL change:', error);
+    console.error('ZeroScroll: Error checking URL change:', error);
   }
 }
 
@@ -289,9 +289,11 @@ function injectSidebar() {
   const container = document.createElement('div');
   container.id = 'hopper-root';
   container.innerHTML = `
-    <div id="hopper-pill" class="hopper-pill">
+    <div id="hopper-pill" class="hopper-pill" title="Toggle Sidebar">
       <div class="hopper-pill-content">
-
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
         <div class="hopper-pill-badge">
           <span class="hopper-badge">0</span>
         </div>
@@ -303,7 +305,6 @@ function injectSidebar() {
        <div class="hopper-header">
         <div class="hopper-header-title">
           <h2>
-            <span class="hopper-header-brand">Hopper</span>
             <span id="hopper-platform-tag" class="hopper-platform-tag"></span>
           </h2>
         </div>
@@ -733,7 +734,7 @@ function detectMessages() {
       }
     }
   } catch (error) {
-    console.error(`Hopper: Error detecting messages on ${currentPlatform?.name || 'unknown'}:`, error);
+    console.error(`ZeroScroll: Error detecting messages on ${currentPlatform?.name || 'unknown'}:`, error);
   }
 }
 
@@ -1406,10 +1407,13 @@ function updateTabCounts() {
  * @param {string} searchQuery Search term for filtering messages.
  */
 function updateUI(filter = 'user', searchQuery = '') {
-  const badge = document.querySelector('.hopper-badge');
+  const badge = document.querySelector('#hopper-pill .hopper-badge');
   const messagesContainer = document.getElementById('hopper-messages');
 
-  badge.textContent = messages.length;
+  if (badge) {
+    badge.textContent = messages.length;
+    badge.style.display = messages.length > 0 ? 'flex' : 'none';
+  }
 
   updateTabCounts();
 

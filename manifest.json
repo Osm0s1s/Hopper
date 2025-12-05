@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Hopper - AI Chat Navigation",
-  "version": "1.0.0",
+  "name": "ZeroScroll - AI Chat Navigation",
+  "version": "2.0.0",
   "description": "Navigate AI chat conversations with an intelligent sidebar",
   "permissions": [
     "storage"

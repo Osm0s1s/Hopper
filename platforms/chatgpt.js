@@ -105,7 +105,7 @@
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [ChatGPT]: Error detecting messages:', error);
+        console.error('ZeroScroll [ChatGPT]: Error detecting messages:', error);
         return [];
       }
     },

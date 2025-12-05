@@ -75,13 +75,13 @@
               order: order++
             });
           } catch (err) {
-            console.error('Hopper [Grok]: Error processing message node:', err);
+            console.error('ZeroScroll [Grok]: Error processing message node:', err);
           }
         });
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [Grok]: Error detecting messages:', error);
+        console.error('ZeroScroll [Grok]: Error detecting messages:', error);
         return [];
       }
 

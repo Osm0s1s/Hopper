@@ -1,11 +1,11 @@
-# Hopper
+# ZeroScroll
 
-> Hopper is a Chrome extension that simplifies navigation by mapping out all messages exchanged between you and AI - giving you instant access to any part of the conversation.  
+> ZeroScroll is a Chrome extension that simplifies navigation by mapping out all messages exchanged between you and AI - giving you instant access to any part of the conversation.  
 > Search, filter, bookmark, and jump around effortlessly.
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Version](https://img.shields.io/badge/Version-2.0.0-green)
 
 ## Features
 

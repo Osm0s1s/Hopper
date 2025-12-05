@@ -178,7 +178,7 @@
 
         return newMessages;
       } catch (error) {
-        console.error('Hopper [DeepSeek]: Error detecting messages:', error);
+        console.error('ZeroScroll [DeepSeek]: Error detecting messages:', error);
         return [];
       }
     },
